@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript">
+//  var HttpClient=function(){
+//    this.get=function(aUrl,aCallback)
+//    {
+//      var anHttpRequest=new XMLHttpRequest();
+//      anHttpRequest.onreadystatechange=function(){
+//        if(anHttpRequest.readyState==4 && anHttpRequest.status==200)
+       
+//          aCallback(anHttpRequest.responseText);
+//        }
+//        anHttpRequest.open("GET",aUrl,true);
+//        anHttpRequest.send(null);
+//      }
+//    }
+//    var theurl="https://praveen264.github.io/internshiptask/movies.json";
+//    var client=new HttpClient();
+//    client.get(theurl,function(response){
+//      var response1=JSON.parse(response);
+//     alert(response1[0].username);
+//    });
+
+// function sendJSON(){ 
+			
+		
+// 			// Creating a XHR object 
+// 			let xhr = new XMLHttpRequest(); 
+// 			let url = "https://praveen264.github.io/internshiptask/movies.json"; 
+		
+// 			// open a connection 
+// 			xhr.open("POST", url, true); 
+
+// 			// Set the request header i.e. which type of content you are sending 
+// 			xhr.setRequestHeader("Content-Type", "application/json"); 
+
+// 			// Create a state change callback 
+// 			xhr.onreadystatechange = function () { 
+// 				if (xhr.readyState === 4 && xhr.status === 200) { 
+
+// 					// Print received data from server 
+// 					result.innerHTML = this.responseText; 
+
+// 				} 
+// 			}; 
+
+// 			// Converting JSON data to string 
+// 			var data = JSON.stringify({ "username": "ghghg" }); 
+
+// 			// Sending data with the request 
+// 			xhr.send(data); 
+// 		} 
+// sendJSON();
+
+//Acemind 1st method
+// var xhr=new XMLHttpRequest();
+// xhr.open('GET','https://praveen264.github.io/internshiptask/movies.json');
+// xhr.onload=()=>{
+//   // console.log(xhr.response);
+//   const data=JSON.parse(xhr.response);
+//   console.log(data);
+// }
+// xhr.send();
+
+//Aceind 2nd method
+
+ function postData(url , data ) {
+  // Default options are marked with *
+  const response =  fetch(url, 
+  {
+    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    mode: 'no-cors', // no-cors, *cors, same-origin
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+     // include, *same-origin, omit
+    headers: {
+       'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    redirect: 'follow', // manual, *follow, error
+   
+    body:{username:"jjdkjd"}// body data type must match "Content-Type" header
+  });
+  return response; // parses JSON response into native JavaScript objects
+}
+
+postData('https://praveen264.github.io/internshiptask/movies.json', { username: "42" })
+  .then((data) => {
+    console.log(data); // JSON data parsed by `response.json()` call
+  });
+
+
+
+
+
+
+  
+  </script>
+  <style>
+  .firstdiv
+    {
+      background-image: url('4 box_.png');
+      height:90px;
+     width: 100%;
+     background-size: cover;
+    }
+    .profileimg
+  {
+    border-radius: 73px 73px 73px 73px;
+      background-color: khaki;
+      width: 154px;
+      height: 154px;
+      margin-left: 34px;
+      margin-right: -27px;
+      margin-top: -62px;
+      position: relative;
+      box-shadow: 0px 0px 2px 4px grey;
+  }
+  .container
+  {
+    margin-left: 12px;
+  }
+  .edit
+  {
+    float: right;
+    margin-top: -55px;
+    margin-right: 92px;
+  }
+  </style>
+</head>
+<body>
+
+<div class="firstdiv">
+ 
+</div>
+<img src="x.jpg" class="profileimg" alt="">
+ <br> 
+ <i class="fa fa-pencil edit" ></i>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>PRAVEEN KUMAR TRIVEDI</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <!-- <h3>Column 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p> -->
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
