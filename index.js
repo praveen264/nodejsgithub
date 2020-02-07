@@ -1,8 +1,5 @@
 var express=require('express');
 var app=express();
 
-app.get('/',(req,res)=>{
-res.send('Hello World from express');
-});
-
+app.use(express.static('public'));
 app.listen(process.env.PORT||8080);
