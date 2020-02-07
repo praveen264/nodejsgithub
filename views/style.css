@@ -1,0 +1,29 @@
+.firstdiv
+    {
+      background-image: url('4 box_.png');
+      height:90px;
+     width: 100%;
+     background-size: cover;
+    }
+    .profileimg
+  {
+    border-radius: 73px 73px 73px 73px;
+      background-color: khaki;
+      width: 154px;
+      height: 154px;
+      margin-left: 34px;
+      margin-right: -27px;
+      margin-top: -62px;
+      position: relative;
+      box-shadow: 0px 0px 2px 4px grey;
+  }
+  .container
+  {
+    margin-left: 12px;
+  }
+  .edit
+  {
+    float: right;
+    margin-top: -55px;
+    margin-right: 92px;
+  }
